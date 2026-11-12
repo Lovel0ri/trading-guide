@@ -6,7 +6,7 @@
 
 | 条目 | 章节 | A 级 | B 级 | C 级 | 更新 |
 | --- | --- | --- | --- | --- | --- |
-| 123 条 | 12 / 12 章 | 85 | 34 | 4 | 2026-10-24 |
+| 123 条 | 12 / 12 章 | 85 | 34 | 4 | 2026-11-12 |
 
 ## 怎么读
 
@@ -15,7 +15,8 @@
   - **A**：原文明确、条件和边界都说清楚了，常有多篇互证。
   - **B**：原文明确，但只出现一次，或依赖资金体量、品种、波动环境。
   - **C**：不是作者直说，是按原文逻辑往外推的一步，当假设看待。
-- 想看筛选和搜索，有三种打开方式：
+- 想看筛选和搜索，有四种打开方式：
+  - **在线版（推荐分享）**：<https://lovel0ri.github.io/trading-guide/> —— GitHub Pages 托管，手机、电脑、任何人都能直接打开，`git push` 后约半分钟自动重建。
   - 局域网服务：在仓库根目录跑 `./start.sh`，终端会打印本机、局域网、mDNS 三个地址；手机连同一个 Wi-Fi，打开局域网那条（形如 `http://192.168.1.10:8771/`）就能看。
   - 只给本机：`HOST=127.0.0.1 ./start.sh`；换端口：`PORT=9000 ./start.sh`。
   - 离线单文件：跑 `node tools/offline/build.mjs`，双击生成的 `dist/主观交易指南.html`，不需要服务器，可以直接发给别人。
@@ -263,6 +264,7 @@ node tools/check-plain.mjs                # 说人话长度
 node tools/check-quotes.mjs               # 原文逐字命中源码目录
 node tools/check-refs.mjs                 # 交叉引用存在
 node tools/offline/build.mjs              # 重出离线单文件（dist/）
+git add -A && git commit -m "更新正文" && git push   # 推上去，GitHub Pages 自动重建
 ```
 
 写作规范见 [CLAUDE.md](CLAUDE.md)。
